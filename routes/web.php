@@ -18,7 +18,9 @@ use App\Models\Listing;
 
 Route::get('/', [ListingController::class, 'index']);
 
-Route::get('/listing/{listing}', [ListingController::class, 'show']);
+Route::get('/listings/create', [ListingController::class, 'create']);
+
+Route::get('/listings/{listing}', [ListingController::class, 'show']);
 
 Route::get('/test', [ListingController::class, 'test']);
 

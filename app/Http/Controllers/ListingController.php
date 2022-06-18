@@ -11,8 +11,9 @@ class ListingController extends Controller
     // All Listings
     public function index()
     {
+        //dd(request('tag'));
         return view('listings.index', [
-            'listings' => Listing::all()
+            'listings' => Listing::latest()->filter(request(['tag', 'search']))->get()
         ]);
     }
 
@@ -24,10 +25,8 @@ class ListingController extends Controller
         ]);
     }
 
-    public function test()
+    public function create()
     {
-        return view('listings.index', [
-            'listings' => Listing::all()
-        ]);
+        return view('listings.create');
     }
 }
