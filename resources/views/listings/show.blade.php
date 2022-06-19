@@ -17,28 +17,7 @@
 
             <h3 class="text-2xl mb-2">{{ $listing->title }}</h3>
             <div class="text-xl font-bold mb-4">{{ $listing->company }}</div>
-            <ul class="flex">
-                <li
-                    class="bg-black text-white rounded-xl px-3 py-1 mr-2"
-                >
-                    <a href="#">Laravel</a>
-                </li>
-                <li
-                    class="bg-black text-white rounded-xl px-3 py-1 mr-2"
-                >
-                    <a href="#">API</a>
-                </li>
-                <li
-                    class="bg-black text-white rounded-xl px-3 py-1 mr-2"
-                >
-                    <a href="#">Backend</a>
-                </li>
-                <li
-                    class="bg-black text-white rounded-xl px-3 py-1 mr-2"
-                >
-                    <a href="#">Vue</a>
-                </li>
-            </ul>
+            <x-listing-tags :tagCsv="$listing->tags" />                
             <div class="text-lg my-4">
                 <i class="fa-solid fa-location-dot"></i> {{ $listing->location }}
             </div>
@@ -50,14 +29,6 @@
                 <div class="text-lg space-y-6">
                     <p>
                         {{ $listing->description }}
-                    </p>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur
-                        adipisicing elit. Quaerat praesentium eos
-                        consequuntur ex voluptatum necessitatibus
-                        odio quos cupiditate iste similique rem in,
-                        voluptates quod maxime animi veritatis illum
-                        quo sapiente.
                     </p>
 
                     <a
